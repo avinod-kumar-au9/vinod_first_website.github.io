@@ -1,0 +1,404 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: rgb(235, 227, 227); */
+}
+
+/* 1st section */
+
+header {
+  margin: 0;
+  background-image: url(the-town-bg-01.jpg);
+  height: 90vh;
+  min-height: 375px;
+  position: relative;
+  background-position: center -400.9px;
+  background-attachment: fixed;
+}
+
+.nav_bar {
+  background-color: white;
+  position: relative;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  padding: 20px;
+}
+
+.nav_bar > * {
+  float: left;
+}
+
+.nav1 > * {
+  color: #6b5d5d;
+  font-family: fantasy;
+  font-size: larger;
+  text-decoration: none;
+  margin-left: 100px;
+  position: relative;
+  padding: 5px;
+}
+
+.nav1 a:hover {
+  border-left: 0px;
+
+  color: #da5f5f;
+
+  top: -4px;
+}
+
+.nav2 {
+  float: right;
+}
+
+.nav2 > * {
+  font-family: fantasy;
+  margin-right: 50px;
+  text-decoration: none;
+  color: #6b5d5d;
+  font-size: larger;
+  position: relative;
+  padding: 5px;
+}
+
+.nav2 a:hover {
+  border-right: 0px;
+  border-top: 0px;
+  padding-bottom: 2px;
+  border-bottom-left-radius: 7px;
+  /* border-bottom-right-radius: 7px; */
+  border-color: rgb(201, 74, 127);
+  border-left: 0px;
+  color: #da5f5f;
+
+  top: -4px;
+}
+
+@media screen and (max-width: 576px) {
+  .nav_bar {
+    position: static;
+  }
+
+  .nav_bar > * {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+  .nav1 > * {
+    width: 100%;
+    display: block;
+    float: none;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .nav1 *:hover {
+    top: 0;
+  }
+  .nav2 > * {
+    width: 100%;
+    display: block;
+    float: none;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+}
+
+.town {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  position: absolute;
+
+  margin-top: 100px;
+  justify-items: center;
+  width: 14%;
+  margin-left: 43%;
+}
+
+.town h1 {
+  font-size: 43px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.town p {
+  font-size: larger;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.town .gg-circleci {
+  transform: rotate(90deg);
+  color: white;
+
+  animation: updown 1.5s ease infinite;
+}
+@keyframes updown {
+  /* 0% {
+      transform: translateY(-100%);
+    } */
+
+  50% {
+    transform: translateY(100%);
+  }
+
+  /* 100% {
+      transform: translateY(-100%);
+    } */
+}
+.gg-circleci:hover {
+  transition: transform 0.8s;
+  transform: scale(2) rotate(270deg);
+
+  cursor: pointer;
+}
+
+.town h1,
+.town p {
+  width: 100%;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    height: 100vh;
+    min-height: 375px;
+    position: relative;
+    background-position: center -400.9px;
+    background-attachment: fixed;
+    width: 100%;
+  }
+  .town {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    position: absolute;
+
+    margin-top: 200px;
+    justify-items: center;
+
+    width: 44%;
+    margin-left: 30%;
+    text-align: center;
+  }
+}
+
+/* 2nd section */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+  padding: 70px 30px 30px 30px;
+
+  height: 350px;
+}
+.col img {
+  width: 90%;
+}
+
+.col h1 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.col p {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.col button {
+  padding: 13px;
+  width: 120px;
+  margin-top: 20px;
+  /* border-color: #EBE3E3; */
+
+  border-style: none;
+  font-size: medium;
+  background-color: rgb(117, 155, 212);
+}
+
+.col button:hover {
+  background-color: #dd8181;
+  cursor: pointer;
+
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 576px) {
+  .row {
+    display: block;
+    width: 100%;
+    margin-bottom: 70%;
+  }
+}
+
+/* 3rd section */
+.temp_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+  padding: 0 30px;
+}
+
+.temp_row img {
+  width: 100%;
+}
+
+.temp_row .temp_col {
+  position: relative;
+}
+
+.temp_col:hover {
+  background-color: #9a9a9a;
+
+  border-bottom: 20px solid rgb(67, 67, 148);
+  height: 360px;
+
+  border-right-style: inset;
+  border-right-width: 7px;
+
+  transition: all 0.2s;
+}
+
+.temp_col:hover img {
+  opacity: 0.3;
+}
+
+.temp_col:hover p {
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+
+  font-family: "Courier New", Courier, monospace;
+  display: block;
+
+  transition: all 0.5s;
+}
+
+.temp_col p {
+  width: 100%;
+  position: absolute;
+
+  text-align: center;
+  top: 45%;
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .temp_row {
+    width: 100%;
+    display: block;
+  }
+  body {
+    margin: 0px 30px 0 30px;
+  }
+  .temp_col * {
+    height: 400px;
+    margin-bottom: 30px;
+  }
+  .temp_col:hover {
+    background-color: #9a9a9a;
+
+    border-bottom: 20px solid rgb(67, 67, 148);
+    height: 390px;
+    margin-bottom: 20px;
+
+    border-right-style: inset;
+    border-right-width: 7px;
+
+    transition: all 0.2s;
+  }
+}
+/* 4th section */
+
+.book_row {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 10%;
+  margin-top: 40px;
+  padding: 40px 30px 30px 30px;
+  background-image: url(https://dev.infiniticreation.co.uk/wp-content/uploads/2018/06/background-kupi-contact-form.png);
+  background-attachment: fixed;
+  background-position: center -300px;
+  background-size: 100%;
+}
+
+.book_col {
+  grid-gap: 25px;
+}
+
+#form {
+  width: 100%;
+  /* height: 450px; */
+
+  padding: 15px 0px 15px 15px;
+
+  /* border-radius: 50px 0 50px 0;
+  border-color: rgb(218, 142, 50);
+  border-style: double none double double; */
+}
+
+#form form textarea {
+  height: 65px;
+}
+
+#form #h1 {
+  width: auto;
+  color: rgb(185, 69, 108);
+  margin: -20px 0 40px 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#form #h1 span {
+  /* border-bottom: 2px solid rgb(193, 193, 206); */
+  font-family: cursive;
+}
+
+#form form button {
+  width: 100px;
+  height: 40px;
+  margin-left: 25%;
+  margin-top: 20px;
+  border-radius: 15px;
+  border-style: groove;
+}
+
+#form form button:hover {
+  cursor: pointer;
+  /* border: 3px solid rgb(93, 214, 178); */
+  transform: scale(1.1);
+
+  border-style: groove;
+  background-color: #bd6b6b;
+  transition: transform 0.5s;
+}
+
+#form form * {
+  width: 280px;
+  height: 35px;
+  margin: 10px 0;
+  /* font-style: italic; */
+}
+
+#form form input:hover,
+#form form textarea:hover {
+  width: 90%;
+  transform: rotateY(12deg);
+  transition: all 0.5s;
+}
+
+.book_col img {
+  width: 70%;
+  height: 460px;
+}
+
+@media screen and (max-width: 576px) {
+
+  .book_row{
+    display: block;
+  }
+
+
+}
